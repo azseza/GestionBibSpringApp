@@ -24,7 +24,13 @@ public class Book {
 
 	@Column(name = "description")
 	private String description;
-
+	
+	@Column(name = "Rating")
+	private String rating; 
+	
+	@Column(name = "Comments")
+	private String comment;
+	
 	@Column(name = "price")
 	private double price;
 
