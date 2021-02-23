@@ -8,11 +8,14 @@ import com.ams.biblio.repositories.CategoryRepository;
 
 @Controller
 //add a paramater as the cathegory id 
-@RequestMapping("/allBooks")
-public class BookController {
+@RequestMapping("/home.html")
+public class HomeController {
+	@SuppressWarnings("unused")
 	private final BookRepository bookRepository;
 	private final CategoryRepository categoryRepository;
-	
+	@RequestMapping("/home.html")
+	public void home() {}
+
 	
 	
 
