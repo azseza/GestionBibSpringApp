@@ -18,9 +18,6 @@ public class BookService<book> {
 	@Autowired
 	private BookRepository bookRepo; 
 	
-	//@Autowired
-	//private CategoryRepository categoryRepo;
-	
 	@Autowired Book book;
 	
 	public List getAllBooks(){
@@ -33,6 +30,7 @@ public class BookService<book> {
 		
 	}
 	
+	//Fonction pour populer le home.html 
 	public List getRandomBooks() {
 		ArrayList<?> allBooks;
 		allBooks = (ArrayList<?>) bookRepo.getAllBooks();

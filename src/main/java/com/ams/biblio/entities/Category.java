@@ -14,10 +14,10 @@ public class Category {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	@Column(name = "category_id")
-	private int id;
+	public int id;
 
 	@Column(name = "name")
-	private String name;
+	public String name;
 
 	public int getId() {
 		return id;

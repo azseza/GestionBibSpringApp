@@ -19,6 +19,10 @@ public class Book {
 	@Column(name = "book_id")
 	private int id;
 
+	@ManyToOne
+	@JoinColumn(name = "category_id")
+	private Category category;
+	
 	@Column(name = "name")
 	private String name;
 
@@ -26,7 +30,7 @@ public class Book {
 	private String description;
 	
 	@Column(name = "Rating")
-	private String rating; 
+	private int rating; //rating (/5)
 	
 	@Column(name = "Comments")
 	private String comment;
@@ -37,10 +41,16 @@ public class Book {
 	@Column(name = "stock")
 	private int stock;
 
-	@ManyToOne
-	@JoinColumn(name = "category_id")
-	private Category category;
-
+	public Book(int id, Category category, String name, String description, int rating, double price ){
+		this.category = category ; 
+		this.id = id; 
+		this.name = name;
+		this.description = description;
+		this.rating = rating;
+		this.price = price;
+	}
+	
+	
 	public int getId() {
 		return id;
 	}
